@@ -24,7 +24,7 @@ def test_list_todos():
 
 def test_secret_env_var():
     # Simulate a required environment variable (secret)
-    secret = os.getenv("MY_SECRET_KEY")
-    assert secret is not None, "MY_SECRET_KEY environment variable is not set"
+    secret = os.getenv("DB_URL")
+    assert secret is not None, "DB_URL environment variable is not set"
     # Ensure it's not empty, but we don't print it
     assert len(secret) > 0
